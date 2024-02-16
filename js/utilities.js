@@ -14,6 +14,30 @@ function setInnerText(elementId, value){
     element.innerText = value;
 }
 
+// =====
+function setBackgroundColorById(elementId){
+    const element = document.getElementById(elementId);
+    element.classList.add('bg-amber-400');
+}
+function removeBackgroundColorById(elementId){
+    const element = document.getElementById(elementId);
+    element.classList.remove('bg-amber-400');
+}
+
+// get element value by id
+function getElementValueById(elementId){
+    const element = document.getElementById(elementId);
+    const stringElement = element.innerText;
+    const numberElement = parseInt(stringElement);
+    return numberElement;
+}
+// set element value by id
+// function setElementValueById(elementId, updateValue){
+//     const element = document.getElementById(elementId);
+//     element.innerText = updateValue;
+// }
+
+// random alphabet generator
 function randomAlphabetGenerator(){
     // including A-Z inside a Array 
     const alphaString = 'abcdefghijklmnopqrstuvwxyz';

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Master</title>
+    <!-- Daisy UI and Tailwind  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body class="anton-font">
+    <main>
+        <!-- home screen -->
+        <section id="home-screen" class="">
+            <div class="bg-[url(images/1.jpg)] bg-no-repeat bg-cover bg-bottom">
+                <div class="flex justify-center min-h-screen items-center">
+                    <div class="bg-base-100 shadow-xl w-1/2 p-32 text-center space-y-12 rounded-2xl">
+                        <h1 class="text-6xl tracking-wider">Typing Master</h1>
+                        <p class="text-2xl tracking-wider">Play Game and Be a Typing Master</p>
+                        <button onclick="play()" class="btn text-2xl tracking-wider">Play Now</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- play ground -->
+        <section id="play-ground" class="hidden">
+            <div
+                class="bg-[url(images/2.jpg)] bg-cover min-h-screen flex flex-col justify-center items-center py-4 space-y-8">
+                <!-- artboard -->
+                <div class="artboard artboard-horizontal phone-1 bg-[#FFFFFFB3] rounded-xl">
+                    <div class="text-center my-8 w-36 mx-auto bg-white p-4">
+                        <p class="">Was Correct !</p>
+                    </div>
+                    <div class="flex justify-center my-16">
+                        <p id="artboard-text" class="text-6xl">A</p>
+                    </div>
+                </div>
+                <!-- Keyboard start -->
+                <div class="text-2xl">
+                    <div class="flex justify-center gap-1 my-1 w-full">
+                        <kbd class="kbd">q</kbd>
+                        <kbd class="kbd">w</kbd>
+                        <kbd class="kbd">e</kbd>
+                        <kbd class="kbd">r</kbd>
+                        <kbd class="kbd">t</kbd>
+                        <kbd class="kbd">y</kbd>
+                        <kbd class="kbd">u</kbd>
+                        <kbd class="kbd">i</kbd>
+                        <kbd class="kbd">o</kbd>
+                        <kbd class="kbd">p</kbd>
+                    </div>
+                    <div class="flex justify-center gap-1 my-1 w-full">
+                        <kbd class="kbd">a</kbd>
+                        <kbd class="kbd">s</kbd>
+                        <kbd class="kbd">d</kbd>
+                        <kbd class="kbd">f</kbd>
+                        <kbd class="kbd">g</kbd>
+                        <kbd class="kbd">h</kbd>
+                        <kbd class="kbd">j</kbd>
+                        <kbd class="kbd">k</kbd>
+                        <kbd class="kbd">l</kbd>
+                    </div>
+                    <div class="flex justify-center gap-1 my-1 w-full">
+                        <kbd class="kbd">z</kbd>
+                        <kbd class="kbd">x</kbd>
+                        <kbd class="kbd">c</kbd>
+                        <kbd class="kbd">v</kbd>
+                        <kbd class="kbd">b</kbd>
+                        <kbd class="kbd">n</kbd>
+                        <kbd class="kbd">m</kbd>
+                        <kbd class="kbd">/</kbd>
+                    </div>
+                </div>
+                <!-- keyboard end -->
+                <!-- score -->
+                <div class="w-1/2 flex justify-between">
+                    <div class="w-36 py-4 bg-teal-600">
+                        <p class="flex justify-center gap-2 text-white text-2xl">Life <img src="images/Group 23.svg"
+                                alt=""> <span>0</span></p>
+                    </div>
+                    <div class="w-36 py-4 bg-sky-600">
+                        <p class="flex justify-center gap-2 text-white text-2xl">Score <img
+                                src="images/monetization_on.svg" alt=""> <span>0</span></p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- final score -->
+        <section class="hidden">
+            <div class="bg-[url(images/3.jpg)] bg-cover bg-no-repeat min-h-screen flex justify-center items-center">
+                <div class="artboard artboard-horizontal phone-1 bg-[#FFFFFFB3] rounded-xl flex flex-col justify-center h-full items-center space-y-8">
+                    <h3 class="text-5xl tracking-wider">Game Over !</h3>
+                    <h2 class="text-5xl tracking-wider">Score: <span>0</span></h2>
+                    <button class="btn tracking-wider">Play Again</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="js/utilities.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
